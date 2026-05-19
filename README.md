@@ -1,29 +1,36 @@
 # 🖥️ Lab - Active Directory com Windows Server 2022
 
-Laboratório prático de Active Directory montado em ambiente virtualizado com VirtualBox.
+Laboratório prático de Active Directory montado em ambiente virtualizado com VirtualBox, simulando um ambiente corporativo real.
 
 ## 🛠️ Ambiente
 - **Hypervisor:** Oracle VirtualBox
-- **Sistema Operacional:** Windows Server 2022 Standard Evaluation
+- **Servidor:** Windows Server 2022 Standard Evaluation
+- **Cliente:** Windows 11 Pro
 - **Domínio:** lab.local
 
-## ✅ O que foi praticado
+## 🏗️ Estrutura do Domínio
+- **OU Funcionarios** — usuários do setor de TI
+- **OU Financeiro** — usuários do setor financeiro
+- **Grupo TI** — agrupa os usuários joao.silva, maria.santos e carlos.oliveira
 
-### Unidades Organizacionais (OU)
-- Criação das OUs `Funcionarios` e `Financeiro` para organizar usuários por setor
+## 👥 Usuários criados
+| Usuário | OU |
+|---|---|
+| joao.silva | Funcionarios |
+| maria.santos | Funcionarios |
+| carlos.oliveira | Funcionarios |
+| ana.costa | Financeiro |
 
-### Usuários
-- Criação de usuários (joao.silva, maria.santos, carlos.oliveira, ana.costa)
-- Reset de senha de usuário
-- Configuração de políticas de senha
+## 🔒 Políticas de Segurança via GPO
+- **Bloquear Painel de Controle** — impede acesso ao Painel de Controle e Configurações do PC
+- **Bloquear USB** — nega acesso a dispositivos de armazenamento removível
+- **Bloquear Instalação de Programas** — restringe instalação de software pelos usuários
+- **Senha Bloqueio de Tela** — bloqueia tela após 15 minutos e exige troca de senha a cada 30 dias
 
-### Grupos
-- Criação do grupo `TI`
-- Adição de membros ao grupo
-
-### GPO (Group Policy Object)
-- Criação de GPO `Bloquear Painel de Controle`
-- Aplicação de política para bloquear acesso ao Painel de Controle e Configurações do PC para usuários da OU Funcionarios
+## ✅ Testes realizados
+- Windows 11 Pro ingressado no domínio lab.local
+- Login com usuário do domínio (lab\joao.silva) no PC cliente
+- GPO de bloqueio do Painel de Controle validada e funcionando
 
 ## 📚 Referências
 - [Microsoft Learn - Active Directory Domain Services](https://learn.microsoft.com/pt-br/training/paths/active-directory-domain-services/)
