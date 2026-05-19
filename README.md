@@ -34,3 +34,8 @@ Laboratório prático de Active Directory montado em ambiente virtualizado com V
 
 ## 📚 Referências
 - [Microsoft Learn - Active Directory Domain Services](https://learn.microsoft.com/pt-br/training/paths/active-directory-domain-services/)
+
+## 📸 Prints do Laboratório
+![Active Directory](Active%20Directory%20Users%20and%20Computers.png)
+![GPO](Group%20Policy%20Management.png)
+![Bloqueio](Operacao%20Cancelada.png)
